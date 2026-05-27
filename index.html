@@ -251,6 +251,171 @@
       color: #2a4a4c;
     }
 
+    /* PRIS */
+    .pris {
+      background: var(--light);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .pris-inner { max-width: 900px; margin: 0 auto; }
+
+    .pris .section-title { color: var(--primary); }
+
+    .pris-sub {
+      font-size: 17px;
+      color: #2a4a4c;
+      max-width: 500px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+
+    .pris-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    @media (max-width: 680px) {
+      .pris-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    }
+
+    .pris-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: left;
+      border: 1.5px solid rgba(12,41,43,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .pris-card.featured {
+      border: 2.5px solid var(--forest);
+      position: relative;
+    }
+
+    .pris-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--forest);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 14px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+
+    .pris-label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pop);
+      margin-bottom: 8px;
+    }
+
+    .pris-price {
+      font-family: 'Cherry Bomb One', cursive;
+      font-size: 46px;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pris-name {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .pris-divider {
+      border: none;
+      border-top: 1px solid rgba(12,41,43,0.1);
+      margin-bottom: 20px;
+    }
+
+    .pris-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .pris-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--primary);
+    }
+
+    .pris-features li.off {
+      color: rgba(12,41,43,0.35);
+    }
+
+    .pris-check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--mint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pris-check svg { width: 10px; height: 10px; }
+
+    .pris-cross {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(12,41,43,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pris-btn {
+      margin-top: 28px;
+      background: var(--primary);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 99px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .pris-btn:hover { background: #1a4547; transform: scale(1.02); }
+
+    .pris-card.featured .pris-btn {
+      background: var(--pop);
+    }
+
+    .pris-card.featured .pris-btn:hover { background: var(--peach); }
+
     /* RAPPORT */
     .rapport { background: var(--primary); padding: 100px 24px; }
     .rapport-inner { max-width: 860px; margin: 0 auto; }
@@ -444,19 +609,101 @@
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <div class="step-title">Exportera data</div>
-        <p class="step-body">Vi guidar dig steg för steg hur du begär ut ditt barns Snapchat-data. Det tar cirka fem minuter.</p>
+        <div class="step-title">Beställ din analys</div>
+        <p class="step-body">Välj paket och fyll i dina uppgifter. Du får ett mejl med en enkel guide och en mejladress att använda i nästa steg.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <div class="step-title">Skicka till oss</div>
-        <p class="step-body">Du laddar upp filen säkert. Vi analyserar kontaktmönster, aktivitetstider och signaler i datan.</p>
+        <div class="step-title">Exportera via Snapchat</div>
+        <p class="step-body">Följ guiden och begär ut ditt barns data direkt i Snapchat-appen. Ange vår mejladress — då skickar Snapchat filen direkt till oss. Klart på fem minuter.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-title">Få din rapport</div>
-        <p class="step-body">Du får en tydlig rapport med konkreta iakttagelser — ett underlag för ett öppet samtal med ditt barn.</p>
+        <p class="step-body">Snapchat skickar filen till oss — oftast inom någon timme, ibland upp till några dagar. Så snart vi har den analyserar vi datan och skickar din rapport inom 24 timmar.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIS -->
+<section class="pris">
+  <div class="pris-inner">
+    <p class="eyebrow">Välj din rapport</p>
+    <h2 class="section-title">Enkla priser, inga prenumerationer</h2>
+    <p class="pris-sub">Du betalar en gång och får din rapport. Inget mer.</p>
+    <div class="pris-grid">
+
+      <!-- BAS -->
+      <div class="pris-card">
+        <p class="pris-label">Grundanalys</p>
+        <div class="pris-price">99<span style="font-size:22px"> kr</span></div>
+        <div class="pris-name">Bas</div>
+        <hr class="pris-divider">
+        <ul class="pris-features">
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kommunikationsmönster</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dygnsrytm & sömnmönster</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Topplista aktiva kontakter</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Varningssignaler</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Friskfaktorer</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sammanfattning</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Samtalsfrågor till barnet</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Resurslänkar vid oro</li>
+          <li class="off"><span class="pris-cross"><svg viewBox="0 0 10 10" fill="none"><line x1="3" y1="3" x2="7" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="3" x2="3" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg></span>Relation till kontakterna</li>
+          <li class="off"><span class="pris-cross"><svg viewBox="0 0 10 10" fill="none"><line x1="3" y1="3" x2="7" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="3" x2="3" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg></span>Frånvaro som signal</li>
+          <li class="off"><span class="pris-cross"><svg viewBox="0 0 10 10" fill="none"><line x1="3" y1="3" x2="7" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="3" x2="3" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg></span>Psykiskt mående</li>
+          <li class="off"><span class="pris-cross"><svg viewBox="0 0 10 10" fill="none"><line x1="3" y1="3" x2="7" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="3" x2="3" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg></span>30 min videosamtal</li>
+        </ul>
+        <button class="pris-btn" data-tally-open="RGV6Gv" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Meddela mig när det lanseras</button>
+      </div>
+
+      <!-- PLUS -->
+      <div class="pris-card featured">
+        <div class="pris-badge">Mest populär</div>
+        <p class="pris-label">Full analys</p>
+        <div class="pris-price">149<span style="font-size:22px"> kr</span></div>
+        <div class="pris-name">Plus</div>
+        <hr class="pris-divider">
+        <ul class="pris-features">
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kommunikationsmönster</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dygnsrytm & sömnmönster</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Topplista aktiva kontakter</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Varningssignaler</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Friskfaktorer</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sammanfattning</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Samtalsfrågor till barnet</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Resurslänkar vid oro</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Relation till kontakterna</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Frånvaro som signal</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Psykiskt mående</li>
+          <li class="off"><span class="pris-cross"><svg viewBox="0 0 10 10" fill="none"><line x1="3" y1="3" x2="7" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="3" x2="3" y2="7" stroke="rgba(12,41,43,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg></span>30 min videosamtal</li>
+        </ul>
+        <button class="pris-btn" data-tally-open="RGV6Gv" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Meddela mig när det lanseras</button>
+      </div>
+
+      <!-- DJUP -->
+      <div class="pris-card">
+        <p class="pris-label">Komplett analys + samtal</p>
+        <div class="pris-price">349<span style="font-size:22px"> kr</span></div>
+        <div class="pris-name">Djup</div>
+        <hr class="pris-divider">
+        <ul class="pris-features">
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kommunikationsmönster</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dygnsrytm & sömnmönster</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Topplista aktiva kontakter</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Varningssignaler</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Friskfaktorer</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sammanfattning</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Samtalsfrågor till barnet</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Resurslänkar vid oro</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Relation till kontakterna</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Frånvaro som signal</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Psykiskt mående</li>
+          <li><span class="pris-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,2.5" stroke="#0c292b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>30 min videosamtal</strong></li>
+        </ul>
+        <button class="pris-btn" data-tally-open="RGV6Gv" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Meddela mig när det lanseras</button>
+      </div>
+
     </div>
   </div>
 </section>
